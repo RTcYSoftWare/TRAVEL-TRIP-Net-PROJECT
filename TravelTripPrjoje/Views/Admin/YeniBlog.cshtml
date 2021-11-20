@@ -1,0 +1,39 @@
+﻿@model TravelTripPrjoje.Models.Siniflar.Blog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!-- YENİ BLOG EKLEME İÇİN OLUŞTURUDĞUMUZ FORM HTML İ -->
+
+<h3>YENİ BLOG EKLEME</h3>
+
+<br />
+
+<form class="form-group" method="post"> <!-- yeni blog eklemek için gerekli olan girdileri almaya yarayan form elemanı -->
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+
+    <br />
+
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+    <br />
+
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+
+    <br />
+
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+
+    <br />
+
+    <button class="btn btn-danger">BLOĞU EKLE</button>
+
+
+</form>
+
